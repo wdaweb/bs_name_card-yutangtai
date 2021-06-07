@@ -7,14 +7,101 @@
   <link rel="stylesheet" href="./css/bootstrap.css">
   <title>BS 名片</title>
   <style>
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-family: 'Microsoft JhengHei', 'Noto Sans TC', sans-serif;
+      box-sizing: border-box;
+    }
     html,
     body{
       width: 100vw;
       height: 100vh;
     }
+    .container-fluid{
+      width: 100vw;
+      height: 100vh;
+      padding: 0;
+      box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.5);
+    }
+    .logo{
+      height: 34%;
+    }
+    .descript{
+      height: 66%;
+    }
+    .img{
+      background: black;
+      background: url(./images/umbrella.jpg)no-repeat center center/contain;
+    }
+    @media(min-width:992px) {
+      .container-fluid{
+        width: 75%;
+        height: 65%;
+        margin: auto;
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .logo{
+        height: 100%;
+      }
+      .descript{
+        height: 100%;
+      }
+    }
   </style>
 </head>
 <body>
+  <div class="container-fluid">
+    <div class="row m-0 h-100">
+      <!-- 圖片 -->
+      <div class="logo col-lg-4 p-0" style="background: black;">
+        <div class="img h-100 text-center"></div>
+      </div>
+      
+      <!-- 文字內容 -->
+      <div class="descript col-lg-8 p-0">
+        <div class="row flex-column h-100">
+          <!-- 姓名 -->
+          <div class="col d-flex mt-5 mx-auto mb-0">
+            <div class="row flex-column w-75 m-auto">
+              <div class="col">
+                <p class="h5 mb-0">Founder</p>
+              </div>
+              <div class="col">
+                <p class="h2 mb-0">Ozwell E Spencer</p>  
+              </div>
+              <div class="col">
+                <p class="h4 mb-0">Umbrella Corporation</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 聯絡方式 -->
+          <div class="col d-flex mb-5 mx-auto mt-0">
+            <div class="row flex-column w-75 m-auto">
+              <div class="col">
+                <p class="m-0">Add: Raccoon City, Arklay Mountains</p>
+              </div>
+              <div class="col">
+                <p class="m-0">Tel: 1968-2003</p>
+              </div>
+              <div class="col">
+                <p class="m-0">E-mail: umbrellacop@gmail.com</p>
+              </div>
+              <div class="col">
+                <p class="m-0">Website: www.umbrellacorporation.net</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="./js/jquery-3.6.0.min.js"></script>
   <script src="./js/bootstrap.min.js"></script>
