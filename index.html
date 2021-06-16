@@ -7,17 +7,11 @@
   <link rel="stylesheet" href="./css/bootstrap.css">
   <title>BS 名片</title>
   <style>
-    *{
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      font-family: 'Microsoft JhengHei', 'Noto Sans TC', sans-serif;
-      box-sizing: border-box;
-    }
     html,
     body{
       width: 100vw;
       height: 100vh;
+      overflow: hidden;
     }
     .container-fluid{
       width: 100vw;
@@ -51,11 +45,33 @@
       .descript{
         height: 100%;
       }
+      .all:before{
+        content: '';
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: url('./images/mold2.png')no-repeat center/cover;
+        
+        position: absolute;
+        top: -15%;
+        right: -5%;
+        transform: rotate(45deg);
+        z-index: 99;
+      }
+      .h2{
+        font-size: 2.7rem;
+      }
+      .h4{
+        font-size: 1.7rem;
+      }
+      .h5{
+        font-size: 1.4rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container-fluid">
+  <div class="all container-fluid">
     <div class="row m-0 h-100">
       <!-- 圖片 -->
       <div class="logo col-lg-4 p-0" style="background: black;">
@@ -64,36 +80,36 @@
       
       <!-- 文字內容 -->
       <div class="descript col-lg-8 p-0">
-        <div class="row flex-column h-100 m-auto">
+        <div class="row flex-column h-100">
           <!-- 姓名 -->
-          <div class="col d-flex mx-auto mb-0 w-75">
-            <div class="row flex-column m-auto">
+          <div class="col d-flex mx-auto w-75">
+            <div class="row flex-column mx-auto mt-auto mx-md-auto mx-lg-0 mt-lg-auto pb-2">
               <div class="col p-0">
-                <p class="h5 mb-0">Founder</p>
+                <p class="h4 mb-0"><small>Founder</small></p>
               </div>
               <div class="col p-0">
                 <p class="h2 mb-0">Ozwell E Spencer</p>  
               </div>
               <div class="col p-0">
-                <p class="h4 mb-0">Umbrella Corporation</p>
+                <p class="h4 mb-0"><small>Umbrella Corporation</small></p>
               </div>
             </div>
           </div>
 
           <!-- 聯絡方式 -->
-          <div class="col d-flex mx-auto mt-0 w-75 align-self-start">
-            <div class="row flex-column m-auto">
+          <div class="col d-flex mx-auto w-75">
+            <div class="row flex-column mx-auto mb-auto mx-md-auto mx-lg-0 mb-lg-auto pt-2">
               <div class="col p-0">
-                <p class="mb-0">Add: Raccoon City, Arklay Mountains</p>
+                <p class="h5 mb-0"><small>Add: Raccoon City, Arklay Mountains</small></p>
               </div>
               <div class="col p-0">
-                <p class="mb-0">Tel: 1968-2003</p>
+                <p class="h5 mb-0"><small>Tel: 1968-2003</small></p>
               </div>
               <div class="col p-0">
-                <p class="mb-0">E-mail: umbrellacop@gmail.com</p>
+                <p class="h5 mb-0"><small>E-mail: umbrellacop@gmail.com</small></p>
               </div>
               <div class="col p-0">
-                <p class="mb-0">Website: www.umbrellacorporation.net</p>
+                <p class="h5 mb-0"><small>Website: www.umbrellacorp.net</small></p>
               </div>
             </div>
           </div>
